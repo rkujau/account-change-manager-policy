@@ -1,0 +1,84 @@
+
+# Privacy Policy for Account Change Manager
+
+**Last Updated: November 9, 2025**
+
+## Overview
+Account Change Manager is an internal tool designed for employees to safely manage client accounts. This privacy policy explains what data we collect and how it's used.
+
+## Data Collection
+
+### 1. Chrome Profile Email Address
+- **What we collect:** Your Chrome profile email address
+- **Why we collect it:** To verify you are an authorized employee and to determine your admin permissions
+- **Where it's stored:** Temporarily in Chrome's local storage and recorded in our company Google Sheets when you take actions
+- **How long we keep it:** Cached for 24 hours for admin status checks
+
+### 2. Button Interaction Data
+- **What we collect:** When admins disable buttons, we collect:
+- Page URL where the button is located
+- CSS selector of the button
+- Button text/label
+- Your email address (who disabled it)
+- Timestamp
+- **Why we collect it:** To maintain a centralized list of disabled buttons across all team members
+- **Where it's stored:** Company-owned Google Sheets
+- **Who can access it:** Only  employees with access to the Google Sheet
+
+### 3. Usage Data
+- **What we collect:** Extension usage is logged in Google Apps Script execution logs
+- **Why we collect it:** For debugging and monitoring extension functionality
+- **Where it's stored:** Google Apps Script execution logs (auto-deleted after a period)
+- **Who can access it:** Only the Google Sheet owner and authorized admins
+
+## Data We Do NOT Collect
+- We do not collect browsing history
+- We do not collect passwords or credentials
+- We do not collect personal information beyond email
+- We do not track your behavior outside of button blocking actions
+- We do not share any data with third parties
+- We do not sell any data
+- We do not use data for advertising
+
+## Data Storage
+All data is stored in:
+- **Company-owned Google Sheets:** Accessible only by employees with proper permissions
+- **Chrome local storage:** Temporary caching of button lists and user authentication status (cleared on extension removal)
+
+## Data Security
+- Extension only works for company email addresses
+- All communication with Google Sheets API is encrypted (HTTPS)
+- Admin permissions managed through company-controlled spreadsheet
+- No data transmitted to external services
+
+## User Rights
+- You can view all collected data by accessing the Google Sheet (link in admin panel)
+- You can request removal of your email from blocked button records by contacting an admin
+- You can uninstall the extension at any time, which clears local cache
+
+## Data Retention
+- **Button blocking records:** Retained indefinitely for compliance purposes
+- **Admin status cache:** 24 hours
+- **Button list cache:** 5 minutes (or until manually refreshed)
+
+## Third-Party Services
+This extension uses:
+- **Google Apps Script:** To host the API backend
+- **Google Sheets:** To store configuration and button blocking data
+
+Both services are operated by Google and subject to [Google's Privacy Policy](https://policies.google.com/privacy).
+
+## Changes to This Policy
+We may update this privacy policy from time to time. Updates will be reflected in the "Last Updated" date at the top of this document.
+
+
+## Compliance
+This extension complies with:
+- Chrome Web Store Developer Program Policies
+- companies internal data handling policies
+- GDPR and privacy best practices
+
+---
+
+**Note:** This extension is an internal tool for employees only. It is not intended for public use and will only function with company email addresses.
+
