@@ -1,84 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy – Account Change Manager</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      margin: 2rem auto;
+      max-width: 900px;
+      padding: 0 1.5rem;
+      color: #222;
+      background-color: #fafafa;
+    }
+    h1, h2, h3 {
+      line-height: 1.3;
+      color: #0d47a1;
+    }
+    h1 {
+      border-bottom: 2px solid #0d47a1;
+      padding-bottom: 0.4rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-left: 4px solid #0d47a1;
+      padding-left: 0.6rem;
+    }
+    h3 {
+      margin-top: 1rem;
+      color: #1e3d8f;
+    }
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    strong {
+      color: #000;
+    }
+    a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .updated {
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy for Account Change Manager</h1>
+  <p class="updated"><strong>Last Updated:</strong> November 9, 2025</p>
 
-# Privacy Policy for Account Change Manager
+  <h2>Overview</h2>
+  <p>
+    Account Change Manager is an internal tool designed for employees to safely manage client accounts. 
+    This privacy policy explains what data we collect and how it's used.
+  </p>
 
-**Last Updated: November 9, 2025**
+  <h2>Data Collection</h2>
 
-## Overview
-Account Change Manager is an internal tool designed for employees to safely manage client accounts. This privacy policy explains what data we collect and how it's used.
+  <h3>1. Chrome Profile Email Address</h3>
+  <ul>
+    <li><strong>What we collect:</strong> Your Chrome profile email address</li>
+    <li><strong>Why we collect it:</strong> To verify you are an authorized employee and to determine your admin permissions</li>
+    <li><strong>Where it's stored:</strong> Temporarily in Chrome's local storage and recorded in company Google Sheets when you take actions</li>
+    <li><strong>How long we keep it:</strong> Cached for 24 hours for admin status checks</li>
+  </ul>
 
-## Data Collection
+  <h3>2. Button Interaction Data</h3>
+  <ul>
+    <li><strong>What we collect:</strong> When admins disable buttons, we collect:
+      <ul>
+        <li>Page URL where the button is located</li>
+        <li>CSS selector of the button</li>
+        <li>Button text/label</li>
+        <li>Your email address (who disabled it)</li>
+        <li>Timestamp</li>
+      </ul>
+    </li>
+    <li><strong>Why we collect it:</strong> To maintain a centralized list of disabled buttons across all team members</li>
+    <li><strong>Where it's stored:</strong> Company-owned Google Sheets</li>
+    <li><strong>Who can access it:</strong> Only employees with access to the Google Sheet</li>
+  </ul>
 
-### 1. Chrome Profile Email Address
-- **What we collect:** Your Chrome profile email address
-- **Why we collect it:** To verify you are an authorized employee and to determine your admin permissions
-- **Where it's stored:** Temporarily in Chrome's local storage and recorded in our company Google Sheets when you take actions
-- **How long we keep it:** Cached for 24 hours for admin status checks
+  <h3>3. Usage Data</h3>
+  <ul>
+    <li><strong>What we collect:</strong> Extension usage is logged in Google Apps Script execution logs</li>
+    <li><strong>Why we collect it:</strong> For debugging and monitoring extension functionality</li>
+    <li><strong>Where it's stored:</strong> Google Apps Script execution logs (auto-deleted after a period)</li>
+    <li><strong>Who can access it:</strong> Only the Google Sheet owner and authorized admins</li>
+  </ul>
 
-### 2. Button Interaction Data
-- **What we collect:** When admins disable buttons, we collect:
-- Page URL where the button is located
-- CSS selector of the button
-- Button text/label
-- Your email address (who disabled it)
-- Timestamp
-- **Why we collect it:** To maintain a centralized list of disabled buttons across all team members
-- **Where it's stored:** Company-owned Google Sheets
-- **Who can access it:** Only  employees with access to the Google Sheet
+  <h2>Data We Do NOT Collect</h2>
+  <ul>
+    <li>We do not collect browsing history</li>
+    <li>We do not collect passwords or credentials</li>
+    <li>We do not collect personal information beyond email</li>
+    <li>We do not track your behavior outside of button blocking actions</li>
+    <li>We do not share any data with third parties</li>
+    <li>We do not sell any data</li>
+    <li>We do not use data for advertising</li>
+  </ul>
 
-### 3. Usage Data
-- **What we collect:** Extension usage is logged in Google Apps Script execution logs
-- **Why we collect it:** For debugging and monitoring extension functionality
-- **Where it's stored:** Google Apps Script execution logs (auto-deleted after a period)
-- **Who can access it:** Only the Google Sheet owner and authorized admins
+  <h2>Data Storage</h2>
+  <ul>
+    <li><strong>Company-owned Google Sheets:</strong> Accessible only by employees with proper permissions</li>
+    <li><strong>Chrome local storage:</strong> Temporary caching of button lists and user authentication status (cleared on extension removal)</li>
+  </ul>
 
-## Data We Do NOT Collect
-- We do not collect browsing history
-- We do not collect passwords or credentials
-- We do not collect personal information beyond email
-- We do not track your behavior outside of button blocking actions
-- We do not share any data with third parties
-- We do not sell any data
-- We do not use data for advertising
+  <h2>Data Security</h2>
+  <ul>
+    <li>Extension only works for authorized company email addresses</li>
+    <li>All communication with Google Sheets API is encrypted (HTTPS)</li>
+    <li>Admin permissions managed through company-controlled spreadsheet</li>
+    <li>No data transmitted to external services</li>
+  </ul>
 
-## Data Storage
-All data is stored in:
-- **Company-owned Google Sheets:** Accessible only by employees with proper permissions
-- **Chrome local storage:** Temporary caching of button lists and user authentication status (cleared on extension removal)
+  <h2>User Rights</h2>
+  <ul>
+    <li>You can view all collected data by accessing the Google Sheet (link in admin panel)</li>
+    <li>You can request removal of your email from blocked button records by contacting an admin</li>
+    <li>You can uninstall the extension at any time, which clears local cache</li>
+  </ul>
 
-## Data Security
-- Extension only works for company email addresses
-- All communication with Google Sheets API is encrypted (HTTPS)
-- Admin permissions managed through company-controlled spreadsheet
-- No data transmitted to external services
+  <h2>Data Retention</h2>
+  <ul>
+    <li><strong>Button blocking records:</strong> Retained indefinitely for compliance purposes</li>
+    <li><strong>Admin status cache:</strong> 24 hours</li>
+    <li><strong>Button list cache:</strong> 5 minutes (or until manually refreshed)</li>
+  </ul>
 
-## User Rights
-- You can view all collected data by accessing the Google Sheet (link in admin panel)
-- You can request removal of your email from blocked button records by contacting an admin
-- You can uninstall the extension at any time, which clears local cache
+  <h2>Third-Party Services</h2>
+  <p>
+    This extension uses:
+  </p>
+  <ul>
+    <li><strong>Google Apps Script:</strong> To host the API backend</li>
+    <li><strong>Google Sheets:</strong> To store configuration and button blocking data</li>
+  </ul>
+  <p>
+    Both services are operated by Google and subject to 
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.
+  </p>
 
-## Data Retention
-- **Button blocking records:** Retained indefinitely for compliance purposes
-- **Admin status cache:** 24 hours
-- **Button list cache:** 5 minutes (or until manually refreshed)
+  <h2>Changes to This Policy</h2>
+  <p>
+    We may update this privacy policy from time to time. Updates will be reflected in the “Last Updated” date at the top of this document.
+  </p>
 
-## Third-Party Services
-This extension uses:
-- **Google Apps Script:** To host the API backend
-- **Google Sheets:** To store configuration and button blocking data
+  <h2>Compliance</h2>
+  <ul>
+    <li>Chrome Web Store Developer Program Policies</li>
+    <li>Internal data handling and security policies</li>
+    <li>GDPR and privacy best practices</li>
+  </ul>
 
-Both services are operated by Google and subject to [Google's Privacy Policy](https://policies.google.com/privacy).
+  <hr />
 
-## Changes to This Policy
-We may update this privacy policy from time to time. Updates will be reflected in the "Last Updated" date at the top of this document.
-
-
-## Compliance
-This extension complies with:
-- Chrome Web Store Developer Program Policies
-- companies internal data handling policies
-- GDPR and privacy best practices
-
----
-
-**Note:** This extension is an internal tool for employees only. It is not intended for public use and will only function with company email addresses.
-
+  <footer>
+    <p><strong>Note:</strong> This extension is an internal tool for employees only. It is not intended for public use and will only function with company email addresses.</p>
+  </footer>
+</body>
+</html>
