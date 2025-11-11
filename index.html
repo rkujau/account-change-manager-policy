@@ -3,182 +3,249 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <title>Privacy Policy – Account Change Manager</title>
   <style>
+    :root {
+      --accent: #0d47a1;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #fafafa;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #8ab4f8;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --bg: #0b0f16;
+        --card: #10151f;
+        --border: #1f2937;
+      }
+    }
+    html, body { height: 100%; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.7;
-      margin: 2rem auto;
-      max-width: 900px;
-      padding: 0 1.5rem;
-      color: #222;
-      background-color: #fafafa;
+      margin: 0;
+      color: var(--text);
+      background: radial-gradient(1200px 700px at 10% -10%, rgba(13,71,161,0.06), transparent 40%) var(--bg);
     }
-    h1, h2, h3 {
-      line-height: 1.3;
-      color: #0d47a1;
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    header.hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
     }
     h1 {
-      border-bottom: 2px solid #0d47a1;
-      padding-bottom: 0.4rem;
+      margin: 0 0 0.25rem 0;
+      font-size: clamp(1.6rem, 3.3vw, 2.1rem);
+      line-height: 1.25;
+      color: var(--accent);
+    }
+    .subtitle { margin: 0; color: var(--muted); }
+    .updated { margin-top: 0.35rem; font-size: 0.95rem; color: var(--muted); }
+    nav.toc {
+      margin: 1rem 0 1.5rem;
+      padding: 0.9rem 1rem;
+      background: linear-gradient(180deg, rgba(13,71,161,0.06), rgba(13,71,161,0.03));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    nav.toc strong { display: block; margin-bottom: 0.35rem; color: var(--accent); }
+    nav.toc a { color: var(--accent); text-decoration: none; }
+    nav.toc ul { margin: 0.25rem 0 0 1.1rem; }
+    section.card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem 1.25rem;
+      margin-top: 1rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
     }
     h2 {
-      margin-top: 2rem;
-      border-left: 4px solid #0d47a1;
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+      color: var(--accent);
+      border-left: 4px solid var(--accent);
       padding-left: 0.6rem;
+      line-height: 1.3;
     }
     h3 {
       margin-top: 1rem;
-      color: #1e3d8f;
+      color: var(--text);
+      font-size: 1.05rem;
     }
-    ul {
-      margin: 0.5rem 0 1rem 1.5rem;
+    p { margin: 0.3rem 0 0.8rem; }
+    ul { margin: 0.25rem 0 0.8rem 1.35rem; }
+    li { margin: 0.2rem 0; }
+    .note {
+      padding: 0.8rem 1rem;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      background: rgba(13,71,161,0.05);
+      color: var(--text);
     }
-    li {
-      margin-bottom: 0.3rem;
-    }
-    strong {
-      color: #000;
-    }
-    a {
-      color: #0d47a1;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .updated {
-      font-size: 0.95rem;
-      color: #555;
-      font-style: italic;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 2rem 0;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #555;
+      margin-top: 1.5rem;
       text-align: center;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy for Account Change Manager</h1>
-  <p class="updated"><strong>Last Updated:</strong> November 9, 2025</p>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Privacy Policy for Account Change Manager</h1>
+      <p class="subtitle">Internal Chrome Extension for managing client account changes</p>
+      <p class="updated"><strong>Last Updated:</strong> November 9, 2025</p>
+      <nav class="toc">
+        <strong>On this page</strong>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#data-collection">Data Collection</a></li>
+          <li><a href="#do-not-collect">Data We Do NOT Collect</a></li>
+          <li><a href="#data-storage">Data Storage</a></li>
+          <li><a href="#security">Data Security</a></li>
+          <li><a href="#rights">User Rights</a></li>
+          <li><a href="#retention">Data Retention</a></li>
+          <li><a href="#third-party">Third-Party Services</a></li>
+          <li><a href="#changes">Changes to This Policy</a></li>
+          <li><a href="#compliance">Compliance</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <h2>Overview</h2>
-  <p>
-    Account Change Manager is an internal tool designed for employees to safely manage client accounts. 
-    This privacy policy explains what data we collect and how it's used.
-  </p>
+    <section id="overview" class="card">
+      <h2>Overview</h2>
+      <p>Account Change Manager is an internal tool designed for employees to safely manage client accounts. This privacy policy explains what data we collect and how it's used.</p>
+    </section>
 
-  <h2>Data Collection</h2>
+    <section id="data-collection" class="card">
+      <h2>Data Collection</h2>
 
-  <h3>1. Chrome Profile Email Address</h3>
-  <ul>
-    <li><strong>What we collect:</strong> Your Chrome profile email address</li>
-    <li><strong>Why we collect it:</strong> To verify you are an authorized employee and to determine your admin permissions</li>
-    <li><strong>Where it's stored:</strong> Temporarily in Chrome's local storage and recorded in company Google Sheets when you take actions</li>
-    <li><strong>How long we keep it:</strong> Cached for 24 hours for admin status checks</li>
-  </ul>
-
-  <h3>2. Button Interaction Data</h3>
-  <ul>
-    <li><strong>What we collect:</strong> When admins disable buttons, we collect:
+      <h3>1. Chrome Profile Email Address</h3>
       <ul>
-        <li>Page URL where the button is located</li>
-        <li>CSS selector of the button</li>
-        <li>Button text/label</li>
-        <li>Your email address (who disabled it)</li>
-        <li>Timestamp</li>
+        <li><strong>What we collect:</strong> Your Chrome profile email address</li>
+        <li><strong>Why we collect it:</strong> To verify you are an authorized employee and to determine your admin permissions</li>
+        <li><strong>Where it's stored:</strong> Temporarily in Chrome's local storage and recorded in company Google Sheets when you take actions</li>
+        <li><strong>How long we keep it:</strong> Cached for 24 hours for admin status checks</li>
       </ul>
-    </li>
-    <li><strong>Why we collect it:</strong> To maintain a centralized list of disabled buttons across all team members</li>
-    <li><strong>Where it's stored:</strong> Company-owned Google Sheets</li>
-    <li><strong>Who can access it:</strong> Only employees with access to the Google Sheet</li>
-  </ul>
 
-  <h3>3. Usage Data</h3>
-  <ul>
-    <li><strong>What we collect:</strong> Extension usage is logged in Google Apps Script execution logs</li>
-    <li><strong>Why we collect it:</strong> For debugging and monitoring extension functionality</li>
-    <li><strong>Where it's stored:</strong> Google Apps Script execution logs (auto-deleted after a period)</li>
-    <li><strong>Who can access it:</strong> Only the Google Sheet owner and authorized admins</li>
-  </ul>
+      <h3>2. Button Interaction Data</h3>
+      <ul>
+        <li><strong>What we collect:</strong> When admins disable buttons, we collect:
+          <ul>
+            <li>Page URL where the button is located</li>
+            <li>CSS selector of the button</li>
+            <li>Button text/label</li>
+            <li>Your email address (who disabled it)</li>
+            <li>Timestamp</li>
+          </ul>
+        </li>
+        <li><strong>Why we collect it:</strong> To maintain a centralized list of disabled buttons across all team members</li>
+        <li><strong>Where it's stored:</strong> Company-owned Google Sheets</li>
+        <li><strong>Who can access it:</strong> Only employees with access to the Google Sheet</li>
+      </ul>
 
-  <h2>Data We Do NOT Collect</h2>
-  <ul>
-    <li>We do not collect browsing history</li>
-    <li>We do not collect passwords or credentials</li>
-    <li>We do not collect personal information beyond email</li>
-    <li>We do not track your behavior outside of button blocking actions</li>
-    <li>We do not share any data with third parties</li>
-    <li>We do not sell any data</li>
-    <li>We do not use data for advertising</li>
-  </ul>
+      <h3>3. Usage Data</h3>
+      <ul>
+        <li><strong>What we collect:</strong> Extension usage is logged in Google Apps Script execution logs</li>
+        <li><strong>Why we collect it:</strong> For debugging and monitoring extension functionality</li>
+        <li><strong>Where it's stored:</strong> Google Apps Script execution logs (auto-deleted after a period)</li>
+        <li><strong>Who can access it:</strong> Only the Google Sheet owner and authorized admins</li>
+      </ul>
+    </section>
 
-  <h2>Data Storage</h2>
-  <ul>
-    <li><strong>Company-owned Google Sheets:</strong> Accessible only by employees with proper permissions</li>
-    <li><strong>Chrome local storage:</strong> Temporary caching of button lists and user authentication status (cleared on extension removal)</li>
-  </ul>
+    <section id="do-not-collect" class="card">
+      <h2>Data We Do NOT Collect</h2>
+      <ul>
+        <li>We do not collect browsing history</li>
+        <li>We do not collect passwords or credentials</li>
+        <li>We do not collect personal information beyond email</li>
+        <li>We do not track your behavior outside of button blocking actions</li>
+        <li>We do not share any data with third parties</li>
+        <li>We do not sell any data</li>
+        <li>We do not use data for advertising</li>
+      </ul>
+    </section>
 
-  <h2>Data Security</h2>
-  <ul>
-    <li>Extension only works for authorized company email addresses</li>
-    <li>All communication with Google Sheets API is encrypted (HTTPS)</li>
-    <li>Admin permissions managed through company-controlled spreadsheet</li>
-    <li>No data transmitted to external services</li>
-  </ul>
+    <section id="data-storage" class="card">
+      <h2>Data Storage</h2>
+      <ul>
+        <li><strong>Company-owned Google Sheets:</strong> Accessible only by employees with proper permissions</li>
+        <li><strong>Chrome local storage:</strong> Temporary caching of button lists and user authentication status (cleared on extension removal)</li>
+      </ul>
+    </section>
 
-  <h2>User Rights</h2>
-  <ul>
-    <li>You can view all collected data by accessing the Google Sheet (link in admin panel)</li>
-    <li>You can request removal of your email from blocked button records by contacting an admin</li>
-    <li>You can uninstall the extension at any time, which clears local cache</li>
-  </ul>
+    <section id="security" class="card">
+      <h2>Data Security</h2>
+      <ul>
+        <li>Extension only works for authorized company email addresses</li>
+        <li>All communication with Google Sheets API is encrypted (HTTPS)</li>
+        <li>Admin permissions managed through company-controlled spreadsheet</li>
+        <li>No data transmitted to external services</li>
+      </ul>
+    </section>
 
-  <h2>Data Retention</h2>
-  <ul>
-    <li><strong>Button blocking records:</strong> Retained indefinitely for compliance purposes</li>
-    <li><strong>Admin status cache:</strong> 24 hours</li>
-    <li><strong>Button list cache:</strong> 5 minutes (or until manually refreshed)</li>
-  </ul>
+    <section id="rights" class="card">
+      <h2>User Rights</h2>
+      <ul>
+        <li>You can view all collected data by accessing the Google Sheet (link in admin panel)</li>
+        <li>You can request removal of your email from blocked button records by contacting an admin</li>
+        <li>You can uninstall the extension at any time, which clears local cache</li>
+      </ul>
+    </section>
 
-  <h2>Third-Party Services</h2>
-  <p>
-    This extension uses:
-  </p>
-  <ul>
-    <li><strong>Google Apps Script:</strong> To host the API backend</li>
-    <li><strong>Google Sheets:</strong> To store configuration and button blocking data</li>
-  </ul>
-  <p>
-    Both services are operated by Google and subject to 
-    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.
-  </p>
+    <section id="retention" class="card">
+      <h2>Data Retention</h2>
+      <ul>
+        <li><strong>Button blocking records:</strong> Retained indefinitely for compliance purposes</li>
+        <li><strong>Admin status cache:</strong> 24 hours</li>
+        <li><strong>Button list cache:</strong> 5 minutes (or until manually refreshed)</li>
+      </ul>
+    </section>
 
-  <h2>Changes to This Policy</h2>
-  <p>
-    We may update this privacy policy from time to time. Updates will be reflected in the “Last Updated” date at the top of this document.
-  </p>
+    <section id="third-party" class="card">
+      <h2>Third-Party Services</h2>
+      <p>This extension uses:</p>
+      <ul>
+        <li><strong>Google Apps Script:</strong> To host the API backend</li>
+        <li><strong>Google Sheets:</strong> To store configuration and button blocking data</li>
+      </ul>
+      <p>Both services are operated by Google and subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    </section>
 
-  <h2>Compliance</h2>
-  <ul>
-    <li>Chrome Web Store Developer Program Policies</li>
-    <li>Internal data handling and security policies</li>
-    <li>GDPR and privacy best practices</li>
-  </ul>
+    <section id="changes" class="card">
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Updates will be reflected in the "Last Updated" date at the top of this document.</p>
+    </section>
 
-  <hr />
+    <section id="compliance" class="card">
+      <h2>Compliance</h2>
+      <ul>
+        <li>Chrome Web Store Developer Program Policies</li>
+        <li>Internal data handling and security policies</li>
+        <li>GDPR and privacy best practices</li>
+      </ul>
+      <div class="note">
+        <strong>Note:</strong> This extension is an internal tool for employees only. It is not intended for public use and will only function with company email addresses.
+      </div>
+    </section>
 
-  <footer>
-    <p><strong>Note:</strong> This extension is an internal tool for employees only. It is not intended for public use and will only function with company email addresses.</p>
-  </footer>
+    <footer>
+      <p>© 2025 – Account Change Manager</p>
+    </footer>
+  </div>
 </body>
 </html>
